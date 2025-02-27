@@ -1,9 +1,7 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
+const { defineConfig } = require('@vue/cli-service');
 
-module.exports = {
+module.exports = defineConfig({
+  transpileDependencies: true,
   devServer: {
     host: "0.0.0.0",
     allowedHosts: "all",
@@ -11,4 +9,4 @@ module.exports = {
       webSocketURL: "wss://8080-" + process.env.GITPOD_WORKSPACE_URL.replace("https://", ""),
     }
   }
-};
+});
